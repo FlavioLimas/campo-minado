@@ -7,6 +7,7 @@ public class Campo {
 
     private boolean aberto = false;
     private boolean minado = false;
+    private boolean marcado = false;
 
     Campo(int linha, int coluna) {
         this.linha = linha;
