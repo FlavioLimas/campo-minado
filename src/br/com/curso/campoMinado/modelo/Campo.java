@@ -1,5 +1,8 @@
 package br.com.curso.campoMinado.modelo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Campo {
 
     private final int linha;
@@ -8,6 +11,8 @@ public class Campo {
     private boolean aberto = false;
     private boolean minado = false;
     private boolean marcado = false;
+
+    private List<Campo> vizinhos = new ArrayList<>();
 
     Campo(int linha, int coluna) {
         this.linha = linha;
