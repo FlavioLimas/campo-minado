@@ -1,6 +1,6 @@
 package br.com.curso.campoMinado.modelo;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,37 +15,44 @@ public class CampoTest {
     }
 
     @Test
-    void testVizinhoRealDistanciaEsquerda() {
+    void testVizinhoDistanciaEsquerda() {
         Campo vizinho = new Campo(3, 2);
         boolean resultado = campo.adicionarVizinho(vizinho);
         assertTrue(resultado);
     }
     
     @Test
-    void testVizinhoRealDistanciaDireita() {
+    void testVizinhoDistanciaDireita() {
         Campo vizinho = new Campo(3, 4);
         boolean resultado = campo.adicionarVizinho(vizinho);
         assertTrue(resultado);
     }
     
     @Test
-    void testVizinhoRealDistanciaCima() {
+    void testVizinhoDistanciaCima() {
         Campo vizinho = new Campo(2, 3);
         boolean resultado = campo.adicionarVizinho(vizinho);
         assertTrue(resultado);
     }
     
     @Test
-    void testVizinhoRealDistanciaBaixo() {
+    void testVizinhoDistanciaBaixo() {
         Campo vizinho = new Campo(4, 3);
         boolean resultado = campo.adicionarVizinho(vizinho);
         assertTrue(resultado);
     }
 
     @Test
-    void testVizinhoRealDistanciaDiagoanal() {
+    void testVizinhoDistanciaDiagoanal() {
         Campo vizinho = new Campo(2, 2);
         boolean resultado = campo.adicionarVizinho(vizinho);
         assertTrue(resultado);
+    }
+    
+    @Test
+    void testNaoVizinhoDistanciaDiagoanal() {
+        Campo vizinho = new Campo(1, 1);
+        boolean resultado = campo.adicionarVizinho(vizinho);
+        assertFalse(resultado);
     }
 }
