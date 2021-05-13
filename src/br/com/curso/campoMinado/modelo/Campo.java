@@ -20,6 +20,12 @@ public class Campo {
     }
 
     boolean adicionarVizinho(Campo vizinho) {
-        
+        boolean linhaDiferente = linha != vizinho.linha;
+        boolean colunaDiferente = coluna != vizinho.coluna;
+        boolean diagonal = linhaDiferente && colunaDiferente;
+
+        int deltaLinha = Math.abs(linha - vizinho.linha);
+        int deltaColuna = Math.abs(coluna - vizinho.coluna);
+        int deltaGeral = deltaColuna + deltaLinha;
     }
 }
