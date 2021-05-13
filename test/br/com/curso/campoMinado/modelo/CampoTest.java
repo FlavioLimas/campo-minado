@@ -41,4 +41,11 @@ public class CampoTest {
         boolean resultado = campo.adicionarVizinho(vizinho);
         assertTrue(resultado);
     }
+
+    @Test
+    void testVizinhoRealDistanciaDiagoanal() {
+        Campo vizinho = new Campo(2, 2);
+        boolean resultado = campo.adicionarVizinho(vizinho);
+        assertTrue(resultado);
+    }
 }
