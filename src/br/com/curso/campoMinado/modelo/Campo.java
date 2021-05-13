@@ -3,6 +3,8 @@ package br.com.curso.campoMinado.modelo;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.curso.campoMinado.excecao.ExplosaoException;
+
 public class Campo {
 
     private final int linha;
@@ -44,4 +46,19 @@ public class Campo {
             marcado = !marcado;
         }
     }
+
+    boolean abrir() {
+
+        if(!aberto && !marcado) {
+            aberto = true;
+
+            if (minado) {
+                throw new ExplosaoException();
+            }
+        }
+
+        return false;
+    }
+
+
 }
