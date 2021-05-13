@@ -27,4 +27,11 @@ public class CampoTest {
         boolean resultado = campo.adicionarVizinho(vizinho);
         assertTrue(resultado);
     }
+    
+    @Test
+    void testVizinhoRealDistanciaCima() {
+        Campo vizinho = new Campo(2, 3);
+        boolean resultado = campo.adicionarVizinho(vizinho);
+        assertTrue(resultado);
+    }
 }
