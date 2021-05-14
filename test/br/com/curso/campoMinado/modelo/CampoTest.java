@@ -123,6 +123,6 @@ public class CampoTest {
 
         campo.adicionarVizinho(campo22);
         campo.abrir();
-        assertTrue(campo22.isAberto() && !campo11.isAberto());
+        assertTrue(campo22.isAberto() && campo11.isFechado());
     }
 }
