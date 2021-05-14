@@ -5,6 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import br.com.curso.campoMinado.excecao.ExplosaoException;
+
 public class CampoTest {
     
     private Campo campo;
@@ -91,6 +93,9 @@ public class CampoTest {
     @Test
     void testCampoMinado() {
         campo.minar();
-        assertTrue(campo.abrir());
+
+        assertThrows(ExplosaoException.class, () -> {
+            campo.abrir();
+        });
     }
 }
