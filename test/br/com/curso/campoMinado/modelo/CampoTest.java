@@ -100,7 +100,7 @@ public class CampoTest {
     }
 
     @Test
-    void testAbrirComVizinhos() {
+    void testAbrirComVizinhos1() {
         Campo campo11 = new Campo(1, 1);
 
         Campo campo22 = new Campo(2, 2);
@@ -109,5 +109,20 @@ public class CampoTest {
         campo.adicionarVizinho(campo22);
         campo.abrir();
         assertTrue(campo22.isAberto() && campo11.isAberto());
+    }
+
+    @Test
+    void testAbrirComVizinhos2() {
+        Campo campo11 = new Campo(1, 1);
+        Campo campo12 = new Campo(1, 1);
+        campo12.minar();
+
+        Campo campo22 = new Campo(2, 2);
+        campo22.adicionarVizinho(campo11);
+        campo22.adicionarVizinho(campo12);
+
+        campo.adicionarVizinho(campo22);
+        campo.abrir();
+        assertTrue(campo22.isAberto() && !campo11.isAberto());
     }
 }
