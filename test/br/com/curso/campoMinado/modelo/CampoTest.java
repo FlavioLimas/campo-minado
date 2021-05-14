@@ -101,13 +101,13 @@ public class CampoTest {
 
     @Test
     void testAbrirComVizinhos() {
-        Campo vizinho1 = new Campo(1, 1);
+        Campo campo11 = new Campo(1, 1);
 
-        Campo vizinhoDoVizinho1 = new Campo(2, 2);
-        vizinho1.adicionarVizinho(vizinhoDoVizinho1);
+        Campo campo22 = new Campo(2, 2);
+        campo22.adicionarVizinho(campo11);
 
-        campo.adicionarVizinho(vizinho1);
+        campo.adicionarVizinho(campo22);
         campo.abrir();
-        assertTrue();
+        assertTrue(campo22.isAberto() && campo11.isAberto());
     }
 }
