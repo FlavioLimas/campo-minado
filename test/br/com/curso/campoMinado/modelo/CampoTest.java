@@ -74,20 +74,23 @@ public class CampoTest {
         assertFalse(campo.isMarcado()); // Apos alteracao passar a ser true
     }
 
-    @Test
-    void testAbrirNaoMinadoNaoMarcado() {
-        assertTrue(campo.abrir());
-    }
     
     @Test
-    void TestAbrirNaoMinadoNaoMarcado() {
+    void TestAbrirNaoMinadoMarcado() {
         campo.alternarMarcacao();
         assertFalse(campo.abrir());
     }
 
     @Test
+    void testAbrirNaoMinadoNaoMarcado() {
+        campo.alternarMarcacao();
+        campo.minar();
+        assertFalse(campo.abrir());
+    }
+    
+    @Test
     void testCampoMinado() {
         campo.minar();
-        assertTrue(campo.isMinado());
+        assertTrue(campo.abrir());
     }
 }
