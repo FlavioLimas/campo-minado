@@ -55,4 +55,11 @@ public class CampoTest {
         boolean resultado = campo.adicionarVizinho(vizinho);
         assertFalse(resultado);
     }
+
+    @Test
+    void testAlternarMarcacao() {
+        assertFalse(campo.isMarcado()); // Inicia false por padrão
+        campo.alternarMarcacao();
+        assertTrue(campo.isMarcado()); // Apos alteracao passar a ser true
+    }
 }
