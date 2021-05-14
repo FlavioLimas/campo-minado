@@ -57,8 +57,12 @@ public class CampoTest {
     }
 
     @Test
+    void TestValorPadraoMarcacao() {
+       assertFalse(campo.isMarcado()); // Inicia false por padrão
+    }
+
+    @Test
     void testAlternarMarcacao() {
-        assertFalse(campo.isMarcado()); // Inicia false por padrão
         campo.alternarMarcacao();
         assertTrue(campo.isMarcado()); // Apos alteracao passar a ser true
     }
