@@ -98,4 +98,16 @@ public class CampoTest {
             campo.abrir();
         });
     }
+
+    @Test
+    void testAbrirComVizinhos() {
+        Campo vizinho1 = new Campo(1, 1);
+
+        Campo vizinhoDoVizinho1 = new Campo(2, 2);
+        vizinho1.adicionarVizinho(vizinhoDoVizinho1);
+
+        campo.adicionarVizinho(vizinho1);
+        campo.abrir();
+        assertTrue();
+    }
 }
