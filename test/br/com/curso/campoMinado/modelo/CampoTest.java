@@ -154,4 +154,10 @@ public class CampoTest {
         boolean teste = campo.isAberto() && campo.isMinado() && campo.isMarcado();
         assertFalse(teste);
     }
+
+    @Test
+    void testPrintCampoMarcado() {
+        campo.alternarMarcacao();
+        assertTrue(campo.isMarcado());
+    }
 }
