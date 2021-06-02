@@ -88,4 +88,12 @@ public class Campo {
     public boolean isFechado() {
         return !isAberto();
     }
+
+    public int getLinha() {
+        return linha;
+    }
+
+    public int getColuna() {
+        return coluna;
+    }
 }
