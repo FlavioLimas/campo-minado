@@ -130,4 +130,9 @@ public class CampoTest {
     void testGetLinha() {
         campo.getLinha();
     }
+
+    @Test
+    void testGetColuna() {
+        campo.getColuna();
+    }
 }
