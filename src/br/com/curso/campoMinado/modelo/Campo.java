@@ -106,4 +106,10 @@ public class Campo {
     long minasNaVizinhanca() {
         return vizinhos.stream().filter(v -> v.minado).count();
     }
+
+    void reiniciar() {
+        aberto = false;
+        minado = false;
+        marcado = false;
+    }
 }
