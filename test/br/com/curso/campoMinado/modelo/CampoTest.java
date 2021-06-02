@@ -158,6 +158,13 @@ public class CampoTest {
     @Test
     void testPrintCampoMarcado() {
         campo.alternarMarcacao();
-        assertTrue(campo.isMarcado());
+        assertTrue(campo.toString().equals("x"));
+    }
+
+    @Test
+    void testPrintCampoAbertoEMinado() {
+        campo.abrir();
+        campo.minar();
+        assertTrue(campo.toString().equals("*"));
     }
 }
