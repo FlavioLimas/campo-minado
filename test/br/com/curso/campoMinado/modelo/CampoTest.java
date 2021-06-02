@@ -142,4 +142,9 @@ public class CampoTest {
         campo.alternarMarcacao();
         assertTrue(campo.objetivoAlcancado());
     }
+
+    @Test
+    void testMinasNaVizinhanca() {
+        campo.minasNaVizinhanca();
+    }
 }
