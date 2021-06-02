@@ -135,4 +135,11 @@ public class CampoTest {
     void testGetColuna() {
         campo.getColuna();
     }
+
+    @Test
+    void testObjetivoAlcancado() {
+        campo.abrir();
+        campo.alternarMarcacao();
+        assertTrue(campo.objetivoAlcancado());
+    }
 }
