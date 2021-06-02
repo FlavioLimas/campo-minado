@@ -147,4 +147,11 @@ public class CampoTest {
     void testMinasNaVizinhanca() {
         campo.minasNaVizinhanca();
     }
+
+    @Test
+    void testReiniciar() {
+        campo.reiniciar();
+        boolean teste = campo.isAberto() && campo.isMinado() && campo.isMarcado();
+        assertFalse(teste);
+    }
 }
