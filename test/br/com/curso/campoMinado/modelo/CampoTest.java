@@ -125,4 +125,9 @@ public class CampoTest {
         campo.abrir();
         assertTrue(campo22.isAberto() && campo11.isFechado());
     }
+
+    @Test
+    void testGetLinha() {
+        campo.getLinha();
+    }
 }
