@@ -96,4 +96,10 @@ public class Campo {
     public int getColuna() {
         return coluna;
     }
+
+    boolean objetivoAlcancado() {
+        boolean desvendado = !minado && aberto;
+        boolean protegido = minado && marcado;
+        return desvendado || protegido;
+    }
 }
