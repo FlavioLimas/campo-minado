@@ -102,4 +102,8 @@ public class Campo {
         boolean protegido = minado && marcado;
         return desvendado || protegido;
     }
+
+    long minasNaVizinhanca() {
+        return vizinhos.stream().filter(v -> v.minado).count();
+    }
 }
