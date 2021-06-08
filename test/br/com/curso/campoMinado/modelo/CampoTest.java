@@ -182,4 +182,11 @@ public class CampoTest {
         campo.abrir();
         assertTrue(campo22.toString().equals("1"));
     }
+
+    @Test
+    void testPrintCampoAberto() {
+        campo.abrir();
+        assertTrue(campo.toString().equals(" "));
+    }
+
 }
