@@ -189,4 +189,8 @@ public class CampoTest {
         assertTrue(campo.toString().equals(" "));
     }
 
+    @Test
+    void testPrintCampoFechado() {
+        assertTrue(campo.toString().equals("?"));
+    }
 }
