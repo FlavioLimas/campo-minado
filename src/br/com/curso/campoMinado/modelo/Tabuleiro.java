@@ -8,7 +8,13 @@ public class Tabuleiro {
     private int colunas;
     private int minas;
 
-    
+    private final List<Campo> campos = new ArrayList<>();
+
+    public Tabuleiro(int linhas, int colunas, int minas) {
+        this.linhas = linhas;
+        this.colunas = colunas;
+        this.minas = minas;
+    }
 
     
 }
