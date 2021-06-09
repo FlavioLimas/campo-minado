@@ -21,6 +21,13 @@ public class Tabuleiro {
         sortearMinas();
     }
 
+    public void abrir(int linha, int coluna) {
+        campos.parallelStream()
+            .filter(c -> c.getLinha() == linha && c.getColuna() == coluna)
+            .findFirst()
+            .ifPresent(c -> c.abrir());
+    }
+
     private void gerarCampos() {
         for (int linha = 0; linha < linhas; linha++) {
             for (int coluna = 0; coluna < colunas; coluna++) {
