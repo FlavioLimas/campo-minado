@@ -16,9 +16,14 @@ public class Tabuleiro {
         this.minas = minas;
 
         gerarCampos();
+        associarVizinhos();
     }
 
     private void gerarCampos() {
+
+    }
+
+    private void associarVizinhos() {
         
     }
 }
