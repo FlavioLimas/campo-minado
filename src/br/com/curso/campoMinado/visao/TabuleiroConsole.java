@@ -43,9 +43,25 @@ public class TabuleiroConsole {
 
     private void startGame() {
         try {
+
+            while(!tabuleiro.objetivoAlcancado()) {
+                System.out.println(tabuleiro);
+
+                String digitado = capturarValorDigitado("Digite (x, y): ");
+            }
             System.out.println("Você ganhou!");
         } catch (ExplosaoException e) {
             System.out.println("Você perdeu!");
         }
+    }
+
+    private String capturarValorDigitado(String texto) {
+        System.out.print(texto);
+        String digitado = entrada.nextLine();
+
+        if ("sair".equalsIgnoreCase(digitado)) {
+            throw new ExitException();
+        }
+        return digitado;
     }
 }
