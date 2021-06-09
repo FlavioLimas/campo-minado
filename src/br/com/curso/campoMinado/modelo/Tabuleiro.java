@@ -17,6 +17,7 @@ public class Tabuleiro {
 
         gerarCampos();
         associarVizinhos();
+        sortearMinas();
     }
 
     private void gerarCampos() {
@@ -24,6 +25,10 @@ public class Tabuleiro {
     }
 
     private void associarVizinhos() {
+
+    }
+
+    private void sortearMinas() {
         
     }
 }
