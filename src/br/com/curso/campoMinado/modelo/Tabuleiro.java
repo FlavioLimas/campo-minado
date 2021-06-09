@@ -38,6 +38,10 @@ public class Tabuleiro {
     }
 
     private void sortearMinas() {
+        int minasArmadas = 0;
 
+        do {
+
+        } while(minasArmadas < minas);
     }
 }
