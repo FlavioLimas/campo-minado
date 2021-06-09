@@ -30,7 +30,11 @@ public class Tabuleiro {
     }
 
     private void associarVizinhos() {
-
+        for (Campo c1 : campos) {
+            for (Campo c2 : campos) {
+                c1.adicionarVizinho(c2);
+            }
+        }
     }
 
     private void sortearMinas() {
