@@ -20,7 +20,7 @@ public class TabuleiroConsole {
         try {
             
         } catch (ExitException e) {
-
+            System.out.println("Tchau!!!");
         } finally {
             entrada.close();
         }
