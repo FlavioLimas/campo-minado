@@ -58,6 +58,19 @@ public class Tabuleiro {
     }
 
     public String toString() {
-        return "";
+        StringBuilder sb = new StringBuilder();
+
+        int i = 0;
+        for (int linha = 0; linha < linhas; linha++) {
+            for (int coluna = 0; coluna < colunas; coluna++) {
+                sb.append(" ");
+                sb.append(campos.get(i));
+                sb.append(" ");
+                i++;
+            }
+            sb.append("\n");
+        }
+
+        return sb.toString();
     }
 }
