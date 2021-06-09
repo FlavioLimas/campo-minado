@@ -48,4 +48,7 @@ public class Tabuleiro {
         } while(minasArmadas < minas);
     }
 
+    public boolean objetivoAlcancado() {
+        return campos.stream().allMatch(c -> c.objetivoAlcancado());
+    }
 }
