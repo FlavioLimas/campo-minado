@@ -43,6 +43,9 @@ public class Tabuleiro {
         Predicate<Campo> minado = c -> c.isMinado();
         do {
             minasArmadas = campos.stream().filter(minado).count();
+            int aleatorio = (int) (Math.random() * campos.size());
+            campos.get(aleatorio).minar();
         } while(minasArmadas < minas);
     }
+
 }
