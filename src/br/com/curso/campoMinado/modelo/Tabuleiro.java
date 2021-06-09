@@ -21,7 +21,12 @@ public class Tabuleiro {
     }
 
     private void gerarCampos() {
-
+        for (int linha = 0; linha < linhas; linha++) {
+            for (int coluna = 0; coluna < colunas; coluna++) {
+                campos.add(new Campo(linha, coluna));
+            }
+            
+        }
     }
 
     private void associarVizinhos() {
@@ -29,6 +34,6 @@ public class Tabuleiro {
     }
 
     private void sortearMinas() {
-        
+
     }
 }
